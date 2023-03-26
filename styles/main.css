@@ -1,0 +1,288 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: #173f5f;
+  --light-blue: #79afdb;
+  --lightest-blue: #e2e2e2;
+  --bright-red: #ef1d1d;
+  --mint-green: #4daaa7;
+  --off-white: #e6f1ff;
+  --text-color: #666666;
+}
+
+* {
+  margin: 0;
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+
+body {
+  font-family: Poppins;
+  color: var(--text-color);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1 {
+  font-family: Oswald;
+  font-weight: bold;
+  color: var(--dark-blue);
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: Oswald;
+  color: var(--light-blue);
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: Oswald;
+  color: var(--mint-green);
+  font-size: 2rem;
+}
+
+h4 {
+  font-family: Oswald;
+  color: var(--lightest-blue);
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--bright-red);
+  text-decoration: none;
+}
+
+a[href]:hover {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a.button {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: white;
+  transition: background-color 300ms ease;
+}
+
+a.button:hover {
+  background-color: #999;
+  color: #333;
+}
+
+main {
+  align-self: center;
+  padding: 0.25rem, 1rem;
+  max-width: 50rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+article,
+aside {
+  margin-bottom: 5rem;
+}
+
+footer {
+  background-color: var(--lightest-blue);
+  color: var(--dark-blue);
+  padding: 2rem;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero h1 {
+  color: #ddd;
+  font-size: clamp(3rem, 15vw + 1rem, 5rem);
+  padding-top: 2rem;
+}
+
+.hero p {
+  color: #ddd;
+}
+
+.hero h1,
+.hero p {
+  text-align: center;
+  text-shadow: 3px 3px 3px #000;
+}
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(110, 248, 102, 0.267),
+    rgba(100, 120, 251, 0.3)
+  );
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: box-shadow 300ms ease;
+}
+
+.card:hover {
+  background: linear-gradient(var(--light-blue), white);
+  transform: scale(1.2);
+  transition: transform 200ms ease-in;
+}
+
+.card {
+  padding: 1rem;
+  flex: 1 1 0;
+}
+
+.pic {
+  align-items: flex-end;
+}
+
+@media (min-width: 500px) {
+  .panel {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .panel h2 {
+    margin: 0;
+  }
+
+  .panel .text-wrapper {
+    flex: 1 1 40%;
+  }
+
+  .panel image-wrapper {
+    order: 0;
+    flex: 1 1 60%;
+  }
+
+  .panel .left {
+    order: -1;
+  }
+
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 40%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cards {
+    flex-wrap: nowrap;
+  }
+}
