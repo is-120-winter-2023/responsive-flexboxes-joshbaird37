@@ -25,7 +25,15 @@
   <!-- TODO: add menu links, delete this comment -->
 
   <header>
+    <div class="menu-icon">
+      <svg viewbox="0 0 60 60">
+        <line x1="5%" y1="50%" x2="95%" y2="50%" />
+        <line x1="5%" y1="50%" x2="95%" y2="50%" />
+      </svg>
+    </div>
+
     <nav>
+      <h2 class="hidden">Main Menu</h2>
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a>About</a></li>
@@ -43,6 +51,13 @@
          ../images/otter-in-water-900px.jpg 900w" sizes="50vw" src="../images/otter-in-water-600px.jpg"
     alt="otter swimming in water pressed against glass" width="600" height="700">
 
+  <script>
+    const header = document.querySelector("header");
+
+    document.querySelector(".menu-icon").addEventListener("click", () => {
+      header.classList.toggle("close");
+    });
+  </script>
 </body>
 
 </html>
