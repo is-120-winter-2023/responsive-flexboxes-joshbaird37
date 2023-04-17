@@ -194,25 +194,27 @@ footer {
 
 .hero h1 {
   color: #ddd;
-  font-size: clamp(3rem, 15vw + 1rem, 5rem);
-  padding-top: 2rem;
+  /*font-size: clamp(4rem, 15vw + 1rem, 6rem);*/
+  font-size: 10vw;
+  padding-top: -1.5rem;
 }
 
 .hero p {
-  color: #ddd;
+  color: rgb(221, 221, 221);
+  font-size: 2.5vw;
 }
 
 .hero h1,
 .hero p {
   text-align: center;
-  text-shadow: 3px 3px 3px #000;
+  text-shadow: 4px 4px 4px #000;
 }
 .hero .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(110, 248, 102, 0.267),
-    rgba(100, 120, 251, 0.3)
+    rgba(169, 247, 169, 0.185),
+    rgba(111, 130, 248, 0.3)
   );
 }
 
@@ -246,6 +248,10 @@ svg {
 
 .pic {
   align-items: flex-end;
+}
+
+video {
+  object-fit: cover;
 }
 
 @media (min-width: 500px) {
