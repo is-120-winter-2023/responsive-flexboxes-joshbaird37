@@ -331,6 +331,11 @@ nav a[href]:hover {
   transform: rotate(-135deg);
 }
 
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 500px) {
   .panel {
     flex-direction: row;
