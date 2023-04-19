@@ -76,10 +76,6 @@ picture img {
   width: 100%;
 }
 
-svg {
-  width: 200px;
-}
-
 /* temp fix to size about img */
 img[srcset] {
   width: 50%;
@@ -202,6 +198,10 @@ footer {
 .hero p {
   color: rgb(221, 221, 221);
   font-size: 2.5vw;
+}
+
+.hero video {
+  width: 100%;
 }
 
 .hero h1,
